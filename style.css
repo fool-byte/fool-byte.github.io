@@ -1,0 +1,225 @@
+/* style.css */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #0056b3;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Hlavička a patička */
+.hlavicka {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.paticka {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Rychlá navigace (TOC) */
+.obsah-toc {
+    background: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border-left: 5px solid #0056b3;
+}
+
+.obsah-toc h2 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.obsah-toc ul {
+    list-style-type: none;
+    padding: 0;
+    columns: 2; /* Sloupce pro seznam */
+}
+
+.obsah-toc li {
+    margin-bottom: 5px;
+}
+
+/* Grid karet */
+.kontejner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.karta {
+    background: white;
+    width: 280px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.karta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.karta-hlavicka {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.karta-obsah {
+    padding: 15px;
+}
+
+.tlacitko {
+    display: block;
+    background: #0056b3;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.tlacitko:hover {
+    background: #004494;
+    text-decoration: none;
+}
+
+.stit-serial {
+    background: #333;
+    color: white;
+    font-size: 0.75em;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Detail */
+.detail-obal {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.menu-zpet {
+    margin-bottom: 20px;
+}
+
+.detail-sloupce {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.sloupec-vlevo {
+    flex: 1;
+    max-width: 300px;
+}
+
+.sloupec-vpravo {
+    flex: 2;
+}
+
+.velky-obrazek {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.box-hodnoceni {
+    background: #f8f9fa;
+    padding: 15px;
+    margin-top: 20px;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+}
+
+.tabulka-info {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.tabulka-info td {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.tabulka-info td:first-child {
+    font-weight: bold;
+    width: 120px;
+    color: #555;
+}
+
+.skupina-roli {
+    margin-bottom: 15px;
+}
+
+.skupina-roli h4 {
+    margin-bottom: 5px;
+    color: #0056b3;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 2px;
+}
+
+.skupina-roli ul {
+    margin-top: 0;
+    padding-left: 20px;
+}
+
+.poznamka {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+/* Mobilní zobrazení */
+@media (max-width: 700px) {
+    .detail-sloupce {
+        flex-direction: column;
+    }
+    .sloupec-vlevo {
+        max-width: 100%;
+    }
+    .obsah-toc ul {
+        columns: 1;
+    }
+/* Štítek seriálu v Rychlé navigaci (TOC) */
+.toc-stit {
+    font-size: 0.7em;
+    background-color: #555;
+    color: white;
+    padding: 1px 4px;
+    border-radius: 3px;
+    margin-left: 5px;
+    vertical-align: middle;
+    text-transform: uppercase; }
+}

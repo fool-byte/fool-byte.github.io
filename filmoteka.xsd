@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://marekbostik.cz/filmoteka"
+           xmlns:ft="http://marekbostik.cz/filmoteka"
+           elementFormDefault="qualified"
+           xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+
+    <xs:simpleType name="nonEmptyString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="imdbIdType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="tt\d{7,8}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="rokType">
+        <xs:restriction base="xs:gYear">
+            <xs:minInclusive value="1900"/>
+            <xs:maxInclusive value="2030"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="roleType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="reziser"/>
+            <xs:enumeration value="scenarista"/>
+            <xs:enumeration value="kameraman"/>
+            <xs:enumeration value="skladatel"/>
+            <xs:enumeration value="showrunner"/>
+            <xs:enumeration value="herec"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="typStopyType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="original"/>
+            <xs:enumeration value="dabing"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="nazvyType">
+        <xs:sequence>
+            <xs:element name="cesky" type="ft:nonEmptyString"/>
+            <xs:element name="originalni" type="ft:nonEmptyString"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="osobaType">
+        <xs:sequence>
+            <xs:element name="jmeno" type="ft:nonEmptyString"/>
+            <xs:element name="prijmeni" type="ft:nonEmptyString"/>
+        </xs:sequence>
+        <xs:attribute name="role" type="ft:roleType" use="required"/>
+        <xs:attribute name="postava" type="xs:string" use="optional"/>
+    </xs:complexType>
+
+    <xs:complexType name="osobyType">
+        <xs:sequence>
+            <xs:element name="osoba" type="ft:osobaType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="zanryType">
+        <xs:sequence>
+            <xs:element name="zanr" type="ft:nonEmptyString" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="lokalizaceStopaType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="typ" type="ft:typStopyType" use="required"/>
+                <xs:attribute name="jazyk" type="xs:language" use="required"/>
+                <xs:attribute name="kanaly" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="lokalizaceTitulkyType">
+        <xs:sequence>
+            <xs:element name="titulek" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="jazyk" type="xs:language" use="required"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="lokalizaceType">
+        <xs:sequence>
+            <xs:element name="stopa" type="ft:lokalizaceStopaType" maxOccurs="unbounded"/>
+            <xs:element name="titulky" type="ft:lokalizaceTitulkyType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="formatType">
+        <xs:sequence>
+            <xs:element name="nosic" type="ft:nonEmptyString"/>
+            <xs:element name="edice" type="xs:string"/>
+            <xs:element name="region" type="xs:string"/>
+            <xs:element name="zvuk" type="xs:string" maxOccurs="unbounded"/>
+            <xs:element name="video" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="hodnoceniType">
+        <xs:sequence>
+            <xs:element name="osobni">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:minInclusive value="0"/>
+                        <xs:maxInclusive value="10"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="imdb">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:minInclusive value="0"/>
+                        <xs:maxInclusive value="10"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="csfd" type="xs:integer" minOccurs="0"/>
+            <xs:element name="rottenTomatoes" type="xs:integer" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="multimediaType">
+        <xs:sequence>
+            <xs:element name="obrazek" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:simpleContent>
+                         <xs:extension base="xs:anyURI">
+                            <xs:attribute name="typ" type="xs:string" use="required"/>
+                         </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="infoSerialType">
+        <xs:sequence>
+             <xs:element name="pocetSerii" type="xs:positiveInteger"/>
+             <xs:element name="pocetEpizod" type="xs:positiveInteger"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:group name="headerGroup">
+        <xs:sequence>
+            <xs:element name="nazvy" type="ft:nazvyType"/>
+            <xs:element name="rok" type="ft:rokType"/>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="obsahGroup">
+        <xs:sequence>
+            <xs:element name="osoby" type="ft:osobyType"/>
+            <xs:element name="zanry" type="ft:zanryType"/>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:group name="footerGroup">
+        <xs:sequence>
+            <xs:element name="lokalizace" type="ft:lokalizaceType"/>
+            <xs:element name="format" type="ft:formatType"/>
+            <xs:element name="hodnoceni" type="ft:hodnoceniType"/>
+            <xs:element name="anotace" type="xs:string"/>
+            <xs:element name="poznamka" type="xs:string" minOccurs="0"/>
+            <xs:element name="multimedia" type="ft:multimediaType"/>
+            <xs:element name="pridano" type="xs:date"/>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:complexType name="filmType">
+        <xs:sequence>
+            <xs:group ref="ft:headerGroup"/>
+            
+            <xs:element name="delka" type="xs:positiveInteger"/>
+            <xs:element name="vekoveOmezeni" type="xs:positiveInteger"/> <xs:group ref="ft:obsahGroup"/>
+            <xs:group ref="ft:footerGroup"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+        <xs:attribute name="imdbId" type="ft:imdbIdType"/>
+    </xs:complexType>
+
+    <xs:complexType name="serialType">
+        <xs:sequence>
+            <xs:group ref="ft:headerGroup"/>
+            
+            <xs:element name="rokKonec" type="ft:rokType" minOccurs="0"/>
+            <xs:element name="delka" type="xs:positiveInteger"/>
+            <xs:element name="infoSerial" type="ft:infoSerialType"/>
+            
+            <xs:group ref="ft:obsahGroup"/>
+            
+            <xs:element name="vekoveOmezeni" type="xs:positiveInteger"/> <xs:group ref="ft:footerGroup"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+        <xs:attribute name="imdbId" type="ft:imdbIdType"/>
+    </xs:complexType>
+
+    <xs:element name="filmoteka">
+        <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="film" type="ft:filmType"/>
+                <xs:element name="serial" type="ft:serialType"/>
+            </xs:choice>
+            <xs:attribute name="majitel" type="ft:nonEmptyString" use="required"/>
+            <xs:attribute name="vytvoreno" type="xs:date" use="required"/>
+        </xs:complexType>
+
+        <xs:key name="uniqueId">
+            <xs:selector xpath="ft:film | ft:serial"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+        <xs:key name="uniqueImdbId">
+            <xs:selector xpath="ft:film | ft:serial"/>
+            <xs:field xpath="@imdbId"/>
+        </xs:key>
+    </xs:element>
+
+    <xs:annotation>
+        <xs:appinfo>
+            <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+                <sch:pattern>
+                    <sch:rule context="ft:film | ft:serial">
+                        <sch:assert test="ft:pridano &lt;= current-date()">Datum přidání nesmí být v budoucnosti</sch:assert>
+                    </sch:rule>
+                    <sch:rule context="ft:serial">
+                        <sch:assert test="not(ft:rokKonec) or (ft:rokKonec >= ft:rok)">Rok konce seriálu musí být stejný nebo vyšší než rok začátku.</sch:assert>
+                    </sch:rule>
+                </sch:pattern>
+            </sch:schema>
+        </xs:appinfo>
+    </xs:annotation>
+</xs:schema>

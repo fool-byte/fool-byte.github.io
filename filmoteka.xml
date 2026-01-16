@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filmoteka xmlns="http://marekbostik.cz/filmoteka"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://marekbostik.cz/filmoteka filmoteka.xsd"
+           majitel="Marek Boštík"
+           vytvoreno="2024-11-26">
+
+    <film id="f001" imdbId="tt2906216">
+        <nazvy>
+            <cesky>Dungeons and Dragons: Čest zlodějů</cesky>
+            <originalni>Dungeons &amp; Dragons: Honor Among Thieves</originalni>
+        </nazvy>
+
+        <rok>2023</rok>
+        <delka>134</delka>
+        <vekoveOmezeni>12</vekoveOmezeni>
+
+        <osoby>
+            <osoba role="reziser">
+                <jmeno>Jonathan</jmeno>
+                <prijmeni>Goldstein</prijmeni>
+            </osoba>
+            <osoba role="reziser">
+                <jmeno>John Francis</jmeno>
+                <prijmeni>Daley</prijmeni>
+            </osoba>
+            <osoba role="scenarista">
+                <jmeno>Michael</jmeno>
+                <prijmeni>Gilio</prijmeni>
+            </osoba>
+            <osoba role="herec" postava="Edgin Darvis">
+                <jmeno>Chris</jmeno>
+                <prijmeni>Pine</prijmeni>
+            </osoba>
+            <osoba role="herec" postava="Holga Kilgore">
+                <jmeno>Michelle</jmeno>
+                <prijmeni>Rodriguez</prijmeni>
+            </osoba>
+            <osoba role="herec" postava="Simon Aumar">
+                <jmeno>Justice</jmeno>
+                <prijmeni>Smith</prijmeni>
+            </osoba>
+            <osoba role="herec" postava="Xenk Yendar">
+                <jmeno>Regé-Jean</jmeno>
+                <prijmeni>Page</prijmeni>
+            </osoba>
+            <osoba role="herec" postava="Forge Fitzwilliam">
+                <jmeno>Hugh</jmeno>
+                <prijmeni>Grant</prijmeni>
+            </osoba>
+             <osoba role="herec" postava="Sofina">
+                <jmeno>Daisy</jmeno>
+                <prijmeni>Head</prijmeni>
+            </osoba>
+        </osoby>
+
+        <zanry>
+            <zanr>Fantasy</zanr>
+            <zanr>Dobrodružný</zanr>
+            <zanr>Komedie</zanr>
+        </zanry>
+
+        <lokalizace>
+            <stopa typ="original" jazyk="en" kanaly="7.1">angličtina</stopa>
+            <stopa typ="dabing" jazyk="cs" kanaly="5.1">čeština</stopa>
+            <titulky>
+                <titulek jazyk="cs">čeština</titulek>
+                <titulek jazyk="en">angličtina</titulek>
+            </titulky>
+        </lokalizace>
+
+        <format>
+            <nosic>4K UHD Blu-ray</nosic>
+            <edice>SteelBook</edice>
+            <region>B</region>
+            <zvuk>Dolby Atmos</zvuk>
+            <video>HDR10+</video>
+        </format>
+
+        <hodnoceni>
+            <osobni>8</osobni>
+            <imdb>7.3</imdb>
+            <csfd>76</csfd>
+            <rottenTomatoes>91</rottenTomatoes>
+        </hodnoceni>
+
+        <anotace>Skupina nepravděpodobných dobrodruhů se vydává na epickou výpravu, aby získala ztracenou relikvii.</anotace>
+        <poznamka>SteelBook s 3D lentikulárním magnetem.</poznamka>
+
+        <multimedia>
+            <obrazek typ="obal_predni">img/f001_front.jpg</obrazek>
+            <obrazek typ="obal_zadni">img/f001_back.jpg</obrazek>
+        </multimedia>
+
+        <pridano>2023-08-10</pridano>
+    </film>
+
+    <film id="f002" imdbId="tt15398776">
+        <nazvy>
+            <cesky>Oppenheimer</cesky>
+            <originalni>Oppenheimer</originalni>
+        </nazvy>
+        <rok>2023</rok>
+        <delka>180</delka>
+        <vekoveOmezeni>15</vekoveOmezeni>
+
+        <osoby>
+            <osoba role="reziser">
+                <jmeno>Christopher</jmeno><prijmeni>Nolan</prijmeni>
+            </osoba>
+            <osoba role="scenarista">
+                <jmeno>Christopher</jmeno><prijmeni>Nolan</prijmeni>
+            </osoba>
+            <osoba role="kameraman">
+                <jmeno>Hoyte</jmeno><prijmeni>van Hoytema</prijmeni>
+            </osoba>
+            <osoba role="herec" postava="J. Robert Oppenheimer">
+                <jmeno>Cillian</jmeno><prijmeni>Murphy</prijmeni>
+            </osoba>
+            <osoba role="herec" postava="Kitty Oppenheimer">
+                <jmeno>Emily</jmeno><prijmeni>Blunt</prijmeni>
+            </osoba>
+            <osoba role="herec" postava="Lewis Strauss">
+                <jmeno>Robert</jmeno><prijmeni>Downey Jr.</prijmeni>
+            </osoba>
+        </osoby>
+
+        <zanry>
+            <zanr>Životopisný</zanr>
+            <zanr>Drama</zanr>
+            <zanr>Historický</zanr>
+        </zanry>
+
+        <lokalizace>
+            <stopa typ="original" jazyk="en" kanaly="5.1">angličtina</stopa>
+            <titulky>
+                <titulek jazyk="cs">čeština</titulek>
+            </titulky>
+        </lokalizace>
+
+        <format>
+            <nosic>4K UHD Blu-ray</nosic>
+            <edice>SteelBook</edice>
+            <region>free</region>
+            <zvuk>Dolby Atmos</zvuk>
+            <video>Dolby Vision</video>
+            <video>HDR10</video>
+        </format>
+
+        <hodnoceni>
+            <osobni>10</osobni>
+            <imdb>8.3</imdb>
+            <csfd>88</csfd>
+        </hodnoceni>
+
+        <anotace>Příběh otce atomové bomby J. Roberta Oppenheimera.</anotace>
+        <multimedia>
+            <obrazek typ="obal_predni">img/f002_front.jpg</obrazek>
+        </multimedia>
+        <pridano>2024-02-28</pridano>
+    </film>
+
+    <film id="f003" imdbId="tt0816692">
+        <nazvy>
+            <cesky>Interstellar</cesky>
+            <originalni>Interstellar</originalni>
+        </nazvy>
+        <rok>2014</rok>
+        <delka>169</delka>
+        <vekoveOmezeni>12</vekoveOmezeni>
+
+        <osoby>
+            <osoba role="reziser">
+                <jmeno>Christopher</jmeno><prijmeni>Nolan</prijmeni>
+            </osoba>
+            <osoba role="scenarista">
+                <jmeno>Jonathan</jmeno><prijmeni>Nolan</prijmeni>
+            </osoba>
+            <osoba role="skladatel">
+                <jmeno>Hans</jmeno><prijmeni>Zimmer</prijmeni>
+            </osoba>
+            <osoba role="herec" postava="Cooper">
+                <jmeno>Matthew</jmeno><prijmeni>McConaughey</prijmeni>
+            </osoba>
+            <osoba role="herec" postava="Brand">
+                <jmeno>Anne</jmeno><prijmeni>Hathaway</prijmeni>
+            </osoba>
+             <osoba role="herec" postava="Murph">
+                <jmeno>Jessica</jmeno><prijmeni>Chastain</prijmeni>
+            </osoba>
+        </osoby>
+
+        <zanry>
+            <zanr>Sci-Fi</zanr>
+            <zanr>Dobrodružný</zanr>
+            <zanr>Drama</zanr>
+        </zanry>
+
+        <lokalizace>
+            <stopa typ="original" jazyk="en" kanaly="5.1">angličtina</stopa>
+            <stopa typ="dabing" jazyk="cs" kanaly="5.1">čeština</stopa>
+            <titulky>
+                <titulek jazyk="cs">čeština</titulek>
+                <titulek jazyk="en">angličtina</titulek>
+            </titulky>
+        </lokalizace>
+
+        <format>
+            <nosic>Blu-ray</nosic>
+            <edice>Standard</edice>
+            <region>B</region>
+            <zvuk>DTS-HD Master Audio</zvuk>
+            <zvuk>Dolby Digital 5.1</zvuk>
+        </format>
+
+        <hodnoceni>
+            <osobni>10</osobni>
+            <imdb>8.7</imdb>
+            <csfd>84</csfd>
+            <rottenTomatoes>73</rottenTomatoes>
+        </hodnoceni>
+
+        <anotace>Tým průzkumníků cestuje červí dírou ve vesmíru, aby zajistil přežití lidstva.</anotace>
+        <multimedia>
+            <obrazek typ="obal_predni">img/f003_front.jpg</obrazek>
+        </multimedia>
+        <pridano>2015-05-15</pridano>
+    </film>
+
+    <serial id="s001" imdbId="tt0944947">
+        <nazvy>
+            <cesky>Hra o trůny</cesky>
+            <originalni>Game of Thrones</originalni>
+        </nazvy>
+
+        <rok>2011</rok>
+        <rokKonec>2019</rokKonec>
+        <delka>60</delka>
+
+        <infoSerial>
+            <pocetSerii>8</pocetSerii>
+            <pocetEpizod>73</pocetEpizod>
+        </infoSerial>
+
+        <osoby>
+            <osoba role="showrunner">
+                <jmeno>David</jmeno><prijmeni>Benioff</prijmeni>
+            </osoba>
+            <osoba role="showrunner">
+                <jmeno>D. B.</jmeno><prijmeni>Weiss</prijmeni>
+            </osoba>
+            <osoba role="herec" postava="Daenerys Targaryen">
+                <jmeno>Emilia</jmeno><prijmeni>Clarke</prijmeni>
+            </osoba>
+            <osoba role="herec" postava="Jon Snow">
+                <jmeno>Kit</jmeno><prijmeni>Harington</prijmeni>
+            </osoba>
+            <osoba role="herec" postava="Tyrion Lannister">
+                <jmeno>Peter</jmeno><prijmeni>Dinklage</prijmeni>
+            </osoba>
+             <osoba role="herec" postava="Cersei Lannister">
+                <jmeno>Lena</jmeno><prijmeni>Headey</prijmeni>
+            </osoba>
+        </osoby>
+
+        <zanry>
+            <zanr>Fantasy</zanr>
+            <zanr>Drama</zanr>
+            <zanr>Dobrodružný</zanr>
+        </zanry>
+        <vekoveOmezeni>18</vekoveOmezeni>
+
+        <lokalizace>
+            <stopa typ="original" jazyk="en" kanaly="5.1">angličtina</stopa>
+            <titulky>
+                <titulek jazyk="cs">čeština</titulek>
+                <titulek jazyk="en">angličtina</titulek>
+            </titulky>
+        </lokalizace>
+
+        <format>
+            <nosic>Blu-ray</nosic>
+            <edice>Kompletní série</edice>
+            <region>B</region>
+            <zvuk>Dolby Atmos</zvuk>
+        </format>
+
+        <hodnoceni>
+            <osobni>9</osobni>
+            <imdb>9.2</imdb>
+            <csfd>91</csfd>
+            <rottenTomatoes>89</rottenTomatoes>
+        </hodnoceni>
+        
+        <anotace>Epické fantasy o intrikách, moci a boji o Železný trůn v Západozemí.</anotace>
+        <poznamka>Kompletní česká edice včetně 8. série a všech bonusů.</poznamka>
+        
+        <multimedia>
+            <obrazek typ="obal_predni">img/s001_front.jpg</obrazek>
+        </multimedia>
+        <pridano>2020-12-15</pridano>
+    </serial>
+
+    <serial id="s002" imdbId="tt11198330">
+        <nazvy>
+            <cesky>Rod draka</cesky>
+            <originalni>House of the Dragon</originalni>
+        </nazvy>
+
+        <rok>2022</rok>
+        <delka>60</delka>
+
+        <infoSerial>
+            <pocetSerii>2</pocetSerii>
+            <pocetEpizod>18</pocetEpizod>
+        </infoSerial>
+
+        <osoby>
+            <osoba role="showrunner">
+                <jmeno>Ryan</jmeno><prijmeni>Condal</prijmeni>
+            </osoba>
+            <osoba role="herec" postava="Rhaenyra Targaryen">
+                <jmeno>Emma</jmeno><prijmeni>D'Arcy</prijmeni>
+            </osoba>
+            <osoba role="herec" postava="Daemon Targaryen">
+                <jmeno>Matt</jmeno><prijmeni>Smith</prijmeni>
+            </osoba>
+        </osoby>
+
+        <zanry>
+            <zanr>Fantasy</zanr>
+            <zanr>Drama</zanr>
+            <zanr>Akční</zanr>
+        </zanry>
+        <vekoveOmezeni>18</vekoveOmezeni>
+
+        <lokalizace>
+            <stopa typ="original" jazyk="en" kanaly="5.1">angličtina</stopa>
+            <titulky>
+                <titulek jazyk="cs">čeština</titulek>
+            </titulky>
+        </lokalizace>
+
+        <format>
+            <nosic>4K UHD Blu-ray</nosic>
+            <edice>SteelBook</edice>
+            <region>free</region>
+            <zvuk>Dolby Atmos</zvuk>
+            <video>Dolby Vision</video>
+        </format>
+
+        <hodnoceni>
+            <osobni>8</osobni>
+            <imdb>8.4</imdb>
+            <csfd>80</csfd>
+        </hodnoceni>
+
+        <anotace>Příběh rodu Targaryenů 200 let před událostmi Hry o trůny.</anotace>
+        <multimedia>
+            <obrazek typ="obal_predni">img/s002_front.jpg</obrazek>
+        </multimedia>
+        <pridano>2024-03-10</pridano>
+    </serial>
+
+</filmoteka>
